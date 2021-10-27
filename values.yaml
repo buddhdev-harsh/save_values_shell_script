@@ -1,7 +1,6 @@
 ######################## start ########################
 
-id: 2
-siteName: somthing2-updated
+siteName: somthing3-updated
 
 replicaCount: 3
 
@@ -78,6 +77,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
 
 # create dynamic volume
 volume:

@@ -1,9 +1,10 @@
 #! /bin/bash
-main=$(grep -A0 'id:' values.yaml | tail -n1); 
-main=${main//*id: /}; 
-
-a=$(grep -n "id: $main" allvalues.yaml | cut -f1 -d:)
-
+main=$(grep -A0 'siteName:' values.yaml | tail -n1); 
+echo "$main"
+main=${main//*siteName: /}; 
+echo "$main"
+a=$(grep -n "siteName: $main" allvalues.yaml | cut -f1 -d:)
+echo "$a"
 if [ -z "$a" ] 
     then
         echo "a is nothing"
