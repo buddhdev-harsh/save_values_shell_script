@@ -8,11 +8,11 @@ fi
 
 
 
-main=$(grep -n "siteName: $1" test.yaml | cut -f1 -d:)
+main=$(grep -n "siteName: $1" allvalues.yaml | cut -f1 -d:)
 first_line=`expr $main - 3`
 last_line=`expr $main + 96`
 c=,
 print=p
 
 
-sed -n "$first_line$c$last_line$print" test.yaml
+sed -n "$first_line$c$last_line$print" allvalues.yaml
