@@ -30,7 +30,9 @@ copy this script where your helm chart is localted.
     $ sudo chmod 777 save_your_yaml_values.sh
     
     $ sudo chmod 777 get_your_yaml_back.sh
-    
+
+## give helm chart name in save_your_yaml_values.sh script
+
     $ ./save_your_yaml_values.sh
     
  after this all the vallues from values.yaml will be stored in allvalues.yaml.
