@@ -1,5 +1,5 @@
 #! /bin/bash
-main=$(grep -A0 'siteName:' values.yaml | tail -n1); 
+main=$(grep -A0 'siteName:' helmchart_name/values.yaml | tail -n1); 
 echo "$main"
 main=${main//*siteName: /}; 
 echo "$main"
@@ -9,7 +9,7 @@ if [ -z "$a" ]
     then
         echo "a is nothing"
         echo "we will get those values in values.yaml file and store it in allvalues.values"
-        sudo sh -c "cat values.yaml >> allvalues.yaml"
+        sudo sh -c "cat helmchart_name/values.yaml >> allvalues.yaml"
     else
         echo "a is something"
         echo "it means all values in values.yaml files are updated and already exisits in allvalues.yaml will delete it and get updated values."
@@ -22,7 +22,7 @@ if [ -z "$a" ]
         sudo sh -c "cat temp-values.yaml > allvalues.yaml"
         sudo rm -rf temp-values.yaml
         echo "will copy from values original file"
-        sudo sh -c "cat values.yaml >> allvalues.yaml"
+        sudo sh -c "cat helmchart_name/values.yaml >> allvalues.yaml"
 fi
 
 
