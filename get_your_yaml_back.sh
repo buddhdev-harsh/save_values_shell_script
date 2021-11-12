@@ -9,10 +9,13 @@ fi
 
 
 main=$(grep -n "siteName: $1" allvalues.yaml | cut -f1 -d:)
-first_line=`expr $main - 3`
-last_line=`expr $main + 96`
+
+first_line=`expr $main - 2`
+last_line=`expr $main + 97`
 c=,
 print=p
-
+echo "$main"
+echo "$first_line"
+echo "$last_line"
 
 sed -n "$first_line$c$last_line$print" allvalues.yaml
