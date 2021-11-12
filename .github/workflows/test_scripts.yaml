@@ -1,0 +1,13 @@
+name: test scripts 
+on: [push]
+jobs: 
+  run_the_scrips:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: testing...
+        run: ./save_your_yaml_values.sh
+        shell: bash
+      - name: will check the file now
+        run : cat allvalues.yaml
+        shell: bash
